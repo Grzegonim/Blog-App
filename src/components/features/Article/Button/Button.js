@@ -1,8 +1,8 @@
 import { Button } from "react-bootstrap";
-
-const Buttons = ({children, variant}) => {
+import styles from  "./Button.module.scss"
+const Buttons = ({children, variant, onClick}) => {
   return (
-    <Button variant={variant} type="text">{children}</Button>
+    <Button variant={variant} type="text" onClick={onClick}>{children}</Button>
   )
 };
 

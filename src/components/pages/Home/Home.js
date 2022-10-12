@@ -23,6 +23,7 @@ const Home = () => {
           date={post.publishedDate} 
           description={post.shortDescription}
           id={post.id}
+          key={post.id}
           />
         )}
       </Row>      
