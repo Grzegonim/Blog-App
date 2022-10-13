@@ -4,7 +4,7 @@ import { Navigate, useParams, Link } from "react-router-dom";
 import Button from "../../features/Article/Button/Button";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
-import removePost from "../../../redux/postReducer";
+import { removePost } from "../../../redux/postReducer";
 
 const Post = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,6 @@ const Post = () => {
   const handleClose = () => setShow(false);
   const handleOpen = () => setShow(true);
   const handleRemove = () => {
-    console.log(allPosts.id)
     dispatch(removePost(allPosts.id))
     handleClose();
   };

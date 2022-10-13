@@ -16,7 +16,7 @@ const Home = () => {
         <Link to="/post/add"><Button variant={"outline-info"}>Add Post</Button></Link>
         </div>
       </div>
-      <Row>
+      <Row> 
         {postList.map(post => <Article 
           title={post.title} 
           author={post.author} 
