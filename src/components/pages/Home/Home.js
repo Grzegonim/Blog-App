@@ -24,6 +24,7 @@ const Home = () => {
           description={post.shortDescription}
           id={post.id}
           key={post.id}
+          category={post.category}
           />
         )}
       </Row>      
