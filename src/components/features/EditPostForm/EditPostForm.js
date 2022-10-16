@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { editPost } from "../../../redux/postReducer";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addPost } from "../../../redux/postReducer";
 
 const EditPostForm = () => {
     const { id } = useParams();

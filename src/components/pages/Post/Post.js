@@ -5,7 +5,7 @@ import Button from "../../features/Article/Button/Button";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import { removePost } from "../../../redux/postReducer";
-
+import DateToString from "../../../utils/DateToStr";
 const Post = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -30,8 +30,8 @@ const Post = () => {
         </div>
       </div>
       <p><b>Author: </b>{allPosts.author}</p>
-      <p><b>Published: </b>{allPosts.publishedDate}</p>
-      <p>{allPosts.content}</p>
+      <p><b>Published: </b></p><DateToString date={allPosts.publishedDate}/>
+      <p dangerouslySetInnerHTML={{ __html: allPosts.content }} />
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Are You sure?</Modal.Title>
